@@ -7,23 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="test()">TEST</button>
-    <button type="button" onclick="subscribe()">SUBSCRIBE</button>
+    <button type="submit" onclick="test()">TEST</button>
+    <button type="submit" onclick="subscribe()">SUBSCRIBE</button>
 
     <script>
         addEventListener('load' , async () => {
            let sw = await navigator.serviceWorker.register('sw.js');
            console.log(sw); 
         });
-        function subscribe() {
+        async function subscribe() {
             let sw = await navigator.serviceWorker.ready;  
             let push = await sw.pushManager.subscrive({
                 userVisibleOnly: true,
-                applicationServerKey : 'BPMd2UB5GiddhZn1NjFRqCNs_WsCxaKLpkIhRpCXfqIwqbv3w3axBqKXV5p71fEOYIR-LFARcEBeB_UyNxqvvBg'
+                applicationServerKey : 'BKOiRPfsD008p0P9mcKiPKBRtuGG4tinQp0plQaxL1VkwbOizhGC94nzOdLdKBEua-yAAmDhJ12iegPlpcARxNk'
             });
             console.log(JSON.stringify(push));
         };
-        function test() {
+        async function test() {
             console.log('test');
         };
     </script>
