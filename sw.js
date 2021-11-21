@@ -11,11 +11,11 @@ self.addEventListener('push', function(e) {
             primaryKey : 2
         },
         actions : [
-            {action : 'explore', title : 'explore this new world' , 
-            // icon : 'images/checkmark.png'
+            {action : 'explore', title : 'explore' , 
+            icon : 'a2.png'
         },
-        {action : 'close', title : 'close this new world' ,
-            // icon : 'images/xmark.png'
+        {action : 'close', title : 'close' ,
+            icon : 'a3.png'
     }]
     };
     e.waitUntil(
