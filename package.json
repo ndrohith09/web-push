@@ -1,0 +1,9 @@
+{
+  "name": "webpush",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "web-push": "^3.4.5"
+  }
+}
